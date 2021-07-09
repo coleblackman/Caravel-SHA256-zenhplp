@@ -5,7 +5,7 @@ _class: invert
 ---
 Working with the
 # **Caravel Harness**
-Cole Blackman, Justin Zhang
+ZEN team: Cole Blackman, Justin Zhang, Ceylan Morgul
 *ECE HPLP Lab UVA 2021*
 
 ![w:500px](caravel.svg)
@@ -34,7 +34,7 @@ Cole Blackman, Justin Zhang
 # Background: OpenLane Flow
 
 - Complete process for building GDSII database files (IC layouts)
-- 
+
 ---
 
 ![w:900px](openlane.png)
@@ -44,6 +44,7 @@ Cole Blackman, Justin Zhang
 # Background: Efabless Open MPW Shuttle Program
 
 - Fabricates your Skywater PDK 130nm process design using Openlane for free
+- Your design must conform to submission standards (open source, git-compatible repo, etc)
 
 ---
 
@@ -74,6 +75,10 @@ Cole Blackman, Justin Zhang
 
 ---
 
+![w:570px](caravel_harness.png)
+
+---
+
 # **Our Work**
 
 - Compiled documentation
@@ -95,7 +100,6 @@ Cole Blackman, Justin Zhang
 
 # **Key Takeaways**
 
-- Skywater 130 PDK - maturing
+- Skywater PDK - maturing and useful
 - Caravel test harness - good for small applications and education
-- 
 
