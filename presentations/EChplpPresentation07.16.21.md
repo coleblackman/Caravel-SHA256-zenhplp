@@ -75,7 +75,39 @@ ZEN team: Cole Blackman, Justin Zhang, Ceylan Morgul
 
 ---
 
+# Comments on Diagrams
+
+- mprj_io I/O bank interfaces with caravel userspace
+- User project area die size has decreased (from Efabless MPW Shuttle 1 to Shuttle 2)
+
+---
+
 ![w:570px](caravel_harness.png)
+
+---
+
+# **Openlane Hardening**
+
+---
+
+# **Writing Verilog for Caravel**
+
+We already saw overhead diagrams of the circuit layout, but how can a designer interface with I/O provided by the harness and build functional chips on this platform?
+
+---
+
+# Johnson Counter Example
+
+- This example defines circuits for the caravel userspace, but does not require the use of I/O (see verilog code on our repository)
+
+
+---
+
+![w:900px](johnson.png)
+
+---
+
+# IO Example: SHA2
 
 ---
 
@@ -103,3 +135,9 @@ ZEN team: Cole Blackman, Justin Zhang, Ceylan Morgul
 - Skywater PDK - maturing and useful
 - Caravel test harness - good for small applications and education
 
+---
+
+# **More Information /Sources /References**
+
+- Caravel documentation: https://caravel-harness.readthedocs.io/en/latest/
+- 
