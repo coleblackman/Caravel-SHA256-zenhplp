@@ -34,6 +34,7 @@ ZEN team: Cole Blackman, Justin Zhang, Ceylan Morgul
 # Background: OpenLane Flow
 
 - Complete process for building GDSII database files (IC layouts)
+- "Converts" designer's verilog files to GDSII instructions
 
 ---
 
@@ -45,6 +46,7 @@ ZEN team: Cole Blackman, Justin Zhang, Ceylan Morgul
 
 - Fabricates your Skywater PDK 130nm process design using Openlane for free
 - Your design must conform to submission standards (open source, git-compatible repo, etc)
+- Design must pass checks
 
 ---
 
@@ -52,7 +54,7 @@ ZEN team: Cole Blackman, Justin Zhang, Ceylan Morgul
 
 - Test harness for Skywater 130nm OS PDK
 - RISC-V RV32IMC IS running on PicoRV32 processor core
-- **Provides a test "harness" of tools like SRAM and GP I/O for open user area circuits** 
+- **Provides a test "harness" consisting of tools like SRAM and GP I/O for open user area circuits** 
 
 ---
 
@@ -108,6 +110,12 @@ We already saw overhead diagrams of the circuit layout, but how can a designer i
 ---
 
 # IO Example: SHA2
+
+*Unlike the previous example, this was written by Jean Cyr, not by us.
+
+---
+
+
 
 ---
 
