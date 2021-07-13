@@ -180,4 +180,8 @@ We already saw overhead diagrams of the circuit layout, but how can a designer i
 # **More Information /Sources /References**
 
 - Caravel documentation: https://caravel-harness.readthedocs.io/en/latest/
-- 
+- Openlane documentation https://openlane.readthedocs.io/en/latest/
+- Jean Cyr https://github.com/miscellaneousbits/
+- Verilog by Example - Blaine Readler
+- Efabless - https://efabless.com/
+
