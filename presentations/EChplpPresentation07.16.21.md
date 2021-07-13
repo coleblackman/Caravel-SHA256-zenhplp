@@ -115,17 +115,42 @@ We already saw overhead diagrams of the circuit layout, but how can a designer i
 
 ---
 
-# SHA3 Keccak
+# SHA-3 Keccak
 
 - Hashing algorithm (secure hashing algorithm series of functions)
 - Multi-step process based on manipulating the bits of the input data
-- Computing SHA3 hashes is a technique for Proof of Work in some cryptocurrencies
+- Computing SHA-3 hashes is a technique for Proof of Work in some cryptocurrencies
 
 ---
 
 # SHA3-256 on Caravel (I/O)
 
-## INSERT CODE SNIPPET HERE
+```
+sha3_256_miner_regs #
+(
+   .DATA_WIDTH(DATA_WIDTH),
+   .ADDR_WIDTH(ADDR_WIDTH)
+)
+s3r
+(
+   .clk(wb_clk_i),     // clock
+   .reset(wb_rst_i),   // reset
+   .addr(wbs_adr_i),   // address
+   .ack(wbs_ack_o),    // acknowledge
+   .read(active_cyc),  // read
+   .write(write_cyc),  // write
+   .rdata(wbs_dat_o),  // data in
+   .wdata(wbs_dat_i),  // data out
+   .sel(wbs_sel_i),    // select
+
+   .header_o(header),             // header
+   .difficulty_o(difficulty),     // 
+   .start_nonce_o(start_nonce),
+   .control_o(control),
+   .solution_i(solution_r[1]),
+   .status_i(status_r[1])
+);
+```
 
 ---
 
@@ -146,10 +171,18 @@ We already saw overhead diagrams of the circuit layout, but how can a designer i
 - Compiled documentation
 - Wrote ECE Wiki pages
 - Adapted SHA-3 for MPW Shuttle 2.0 and wrote SHA-3 documentation
-- Wrote and hardened johnson counter within Openlane/Caravel harness (doesn't use I/O)  
+- Wrote and hardened Johnson counter within Openlane/Caravel harness (doesn't use I/O)  
 - Wrote Verilog tutorial
 - Adapted SHA-3 algorithm for a smaller die size
 
+---
+
+# **Possible improvements for SHA-3**
+
+- Adapt to smaller die area
+- Change number of stages in pipeline
+- Offload padding etc. from ASIC
+- Variable message size
 
 ---
 
@@ -163,8 +196,27 @@ We already saw overhead diagrams of the circuit layout, but how can a designer i
 # Our Future Work: SHA2-256
 
 - Similar to SHA3-256 in nature (SHA)
-- Still widely used today (coexists with SHA3)
+- Still widely used today (coexists with SHA-3)
 - Used in Bitcoin (ASIC)
+
+---
+
+# **SSCS "PICO" Open-Source Design Contest**
+
+- First year members only, pre-college and undergraduates
+- Encouraged to use an SSCS circuit
+- Can reuse open-source circuits
+- chipIgnite: “pre-designed carrier chip” and “open-source EDA tools”
+
+---
+
+# PICO timeline
+
+- July 30: submit proposal
+- 15-20 selected round 1 design teams
+    - Weekly meetings until October
+- Sept. 24: 6 designs selected
+- Can still apply for shuttles
 
 ---
 
