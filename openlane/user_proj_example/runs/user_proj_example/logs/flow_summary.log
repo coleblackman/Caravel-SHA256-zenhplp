@@ -1,0 +1,76 @@
+[INFO]: Current run directory is /project/openlane/user_proj_example/runs/user_proj_example
+[INFO]: Preparing LEF Files
+[INFO]: Extracting the number of available metal layers from /localtmp/asic/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef
+[INFO]: The number of available metal layers is 6
+[INFO]: The available metal layers are li1 met1 met2 met3 met4 met5
+[INFO]: Merging LEF Files...
+[INFO]: Trimming Liberty...
+[INFO]: Generating Exclude List...
+[INFO]: Storing configs into config.tcl ...
+[INFO]: Preparation complete
+[INFO]: Running Synthesis...
+[INFO]: current step index: 1
+[INFO]: Changing netlist from 0 to /project/openlane/user_proj_example/runs/user_proj_example/results/synthesis/user_proj_example.synthesis.v
+[INFO]: Running Static Timing Analysis...
+[INFO]: current step index: 2
+[INFO]: Synthesis was successful
+[INFO]: Running Floorplanning...
+[INFO]: Running Initial Floorplanning...
+[INFO]: current step index: 3
+[INFO]: Core area width: 888.96
+[INFO]: Core area height: 578.24
+[INFO]: Changing layout from 0 to /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/3-verilog2def_openroad.def
+[INFO]: current step index: 4
+[INFO]: Changing layout from /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/3-verilog2def_openroad.def to /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/4-ioPlacer.def
+[INFO]: Running Tap/Decap Insertion...
+[INFO]: current step index: 5
+[INFO]: Changing layout from /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/4-ioPlacer.def to /project/openlane/user_proj_example/runs/user_proj_example/results/floorplan/user_proj_example.floorplan.def
+[INFO]: Taking a Screenshot of the Layout Using Klayout...
+[INFO]: current step index: 6
+[INFO]: Screenshot taken.
+[INFO]: Power planning the following nets
+[INFO]: Power: vccd1 vccd2 vdda1 vdda2
+[INFO]: Ground: vssd1 vssd2 vssa1 vssa2
+[INFO]: Generating PDN...
+[INFO]: current step index: 7
+[INFO]: PDN generation was successful.
+[INFO]: Changing layout from /project/openlane/user_proj_example/runs/user_proj_example/results/floorplan/user_proj_example.floorplan.def to /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/7-pdn.def
+[INFO]: Generating PDN...
+[INFO]: current step index: 8
+[INFO]: PDN generation was successful.
+[INFO]: Changing layout from /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/7-pdn.def to /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/8-pdn.def
+[INFO]: Generating PDN...
+[INFO]: current step index: 9
+[INFO]: PDN generation was successful.
+[INFO]: Changing layout from /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/8-pdn.def to /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/9-pdn.def
+[INFO]: Generating PDN...
+[INFO]: current step index: 10
+[INFO]: PDN generation was successful.
+[INFO]: Changing layout from /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/9-pdn.def to /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/10-pdn.def
+[INFO]: Running Placement...
+[INFO]: Running Global Placement...
+[INFO]: current step index: 11
+[ERROR]: during executing: "openroad -exit /openLANE_flow/scripts/openroad/or_replace.tcl |& tee >&@stdout /project/openlane/user_proj_example/runs/user_proj_example/logs/placement/11-replace.log"
+[ERROR]: Exit code: 1
+[ERROR]: Last 10 lines:
+child process exited abnormally
+
+[ERROR]: Please check openroad  log file
+[ERROR]: Dumping to /project/openlane/user_proj_example/runs/user_proj_example/error.log
+[INFO]: Calculating Runtime From the Start...
+[INFO]: Flow failed for user_proj_example/13-07_14-50 in 0h11m21s
+[INFO]: Generating Final Summary Report...
+[INFO]: Design Name: user_proj_example
+Run Directory: /project/openlane/user_proj_example/runs/user_proj_example
+Source not found.
+----------------------------------------
+
+LVS Summary:
+Source: /project/openlane/user_proj_example/runs/user_proj_example/results/lvs/user_proj_example.lvs_parsed.gds.log
+Source not found.
+----------------------------------------
+
+Antenna Summary:
+No antenna report found.
+[INFO]: check full report here: /project/openlane/user_proj_example/runs/user_proj_example/reports/final_summary_report.csv
+[ERROR]: Flow Failed.

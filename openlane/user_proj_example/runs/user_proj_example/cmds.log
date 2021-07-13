@@ -1,0 +1,40 @@
+Tue Jul 13 14:50:08 UTC 2021 - Executing "python3 /openLANE_flow/scripts/extract_metal_layers.py -t /localtmp/asic/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef -o /project/openlane/user_proj_example/runs/user_proj_example/tmp/met_layers_list.txt"
+
+Tue Jul 13 14:50:09 UTC 2021 - Executing "/openLANE_flow/scripts/mergeLef.py -i /localtmp/asic/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef {/localtmp/asic/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /localtmp/asic/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fakediode_2.lef /localtmp/asic/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fill_12.lef /localtmp/asic/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__decap_12.lef} -o /project/openlane/user_proj_example/runs/user_proj_example/tmp/merged_unpadded.lef |& tee >&@stdout"
+
+Tue Jul 13 14:50:09 UTC 2021 - Executing "/openLANE_flow/scripts/libtrim.pl /localtmp/asic/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib /project/openlane/user_proj_example/runs/user_proj_example/tmp/trimmed.lib.exclude.list > /project/openlane/user_proj_example/runs/user_proj_example/tmp/trimmed.lib"
+
+Tue Jul 13 14:50:09 UTC 2021 - Executing "echo {openlane v0.21} > /project/openlane/user_proj_example/runs/user_proj_example/OPENLANE_VERSION"
+
+Tue Jul 13 14:50:09 UTC 2021 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /localtmp/asic/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /project/openlane/user_proj_example/runs/user_proj_example/tmp/sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib"
+
+Tue Jul 13 14:50:09 UTC 2021 - Executing "yosys -c /openLANE_flow/scripts/synth.tcl -l /project/openlane/user_proj_example/runs/user_proj_example/logs/synthesis/1-yosys.log |& tee >&@stdout"
+
+Tue Jul 13 15:00:23 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/project\/openlane\/user_proj_example\/runs\/user_proj_example\/results\/synthesis\/user_proj_example.synthesis.v/} /project/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Tue Jul 13 15:00:23 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 0/} /project/openlane/user_proj_example/runs/user_proj_example/config.tcl"
+
+Tue Jul 13 15:00:23 UTC 2021 - Executing "sed -i /defparam/d /project/openlane/user_proj_example/runs/user_proj_example/results/synthesis/user_proj_example.synthesis.v"
+
+Tue Jul 13 15:00:24 UTC 2021 - Executing "sta /openLANE_flow/scripts/sta.tcl |& tee >&@stdout /project/openlane/user_proj_example/runs/user_proj_example/logs/synthesis/2-opensta"
+
+Tue Jul 13 15:00:29 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_floorplan.tcl |& tee >&@stdout /project/openlane/user_proj_example/runs/user_proj_example/logs/floorplan/3-verilog2def.openroad.log"
+
+Tue Jul 13 15:00:32 UTC 2021 - Executing "python3 /openLANE_flow/scripts/io_place.py --input-lef /project/openlane/user_proj_example/runs/user_proj_example/tmp/merged.lef --input-def /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/3-verilog2def_openroad.def --config /project/openlane/user_proj_example/pin_order.cfg --hor-layer 4 --ver-layer 3 --ver-width-mult 2 --hor-width-mult 2 --hor-extension -1 --ver-extension -1 --length 4 -o /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/4-ioPlacer.def |& tee /project/openlane/user_proj_example/runs/user_proj_example/logs/floorplan/4-place_io_ol.log >&@stdout"
+
+Tue Jul 13 15:00:34 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_tapcell.tcl |& tee >&@stdout /project/openlane/user_proj_example/runs/user_proj_example/logs/floorplan/5-tapcell.log"
+
+Tue Jul 13 15:00:38 UTC 2021 - Executing "bash /openLANE_flow/scripts/klayout/scrotLayout.sh /localtmp/asic/pdks/sky130A/libs.tech/klayout/sky130A.lyt /project/openlane/user_proj_example/runs/user_proj_example/results/floorplan/user_proj_example.floorplan.def |& tee >&@stdout /project/openlane/user_proj_example/runs/user_proj_example/logs/klayout/6-klayout.scrot.log"
+
+Tue Jul 13 15:00:44 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_pdn.tcl |& tee >&@stdout /project/openlane/user_proj_example/runs/user_proj_example/logs/floorplan/7-pdn.log"
+
+Tue Jul 13 15:00:55 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_pdn.tcl |& tee >&@stdout /project/openlane/user_proj_example/runs/user_proj_example/logs/floorplan/8-pdn.log"
+
+Tue Jul 13 15:01:05 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_pdn.tcl |& tee >&@stdout /project/openlane/user_proj_example/runs/user_proj_example/logs/floorplan/9-pdn.log"
+
+Tue Jul 13 15:01:16 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_pdn.tcl |& tee >&@stdout /project/openlane/user_proj_example/runs/user_proj_example/logs/floorplan/10-pdn.log"
+
+Tue Jul 13 15:01:26 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_replace.tcl |& tee >&@stdout /project/openlane/user_proj_example/runs/user_proj_example/logs/placement/11-replace.log"
+
+Tue Jul 13 15:01:29 UTC 2021 - Executing "python3 /openLANE_flow/report_generation_wrapper.py -d /project/openlane/user_proj_example -dn user_proj_example -t user_proj_example -o /project/openlane/user_proj_example/runs/user_proj_example/reports/final_summary_report.csv -m /project/openlane/user_proj_example/runs/user_proj_example/reports/manufacturability_report.rpt -rs /project/openlane/user_proj_example/runs/user_proj_example/reports/runtime_summary_report.rpt -r /project/openlane/user_proj_example/runs/user_proj_example"
+

@@ -1,0 +1,6 @@
+Using Techfile: /localtmp/asic/pdks/sky130A/libs.tech/klayout/sky130A.lyt
+Using layout file: /project/openlane/user_proj_example/runs/user_proj_example/results/floorplan/user_proj_example.floorplan.def
+[INFO] Reading tech file: /localtmp/asic/pdks/sky130A/libs.tech/klayout/sky130A.lyt
+[INFO] Reading Layout file: /project/openlane/user_proj_example/runs/user_proj_example/results/floorplan/user_proj_example.floorplan.def
+[INFO] Writing out PNG screenshot '/project/openlane/user_proj_example/runs/user_proj_example/results/floorplan/user_proj_example.floorplan.def.png'
+Done

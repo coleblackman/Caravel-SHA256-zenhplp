@@ -1,0 +1,20 @@
+Notice 0: Reading LEF file:  /project/openlane/user_proj_example/runs/user_proj_example/tmp/merged.lef
+Notice 0:     Created 13 technology layers
+Notice 0:     Created 25 technology vias
+Notice 0:     Created 440 library cells
+Notice 0: Finished LEF file:  /project/openlane/user_proj_example/runs/user_proj_example/tmp/merged.lef
+Notice 0: 
+Reading DEF file: /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/3-verilog2def_openroad.def
+Notice 0: Design: user_proj_example
+Notice 0: 		Created 100000 Insts
+Notice 0: 		Created 100000 Nets
+Notice 0:     Created 636 pins.
+Notice 0:     Created 109220 components and 837766 component-terminals.
+Notice 0:     Created 109619 nets and 400682 connections.
+Notice 0: Finished DEF file: /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/3-verilog2def_openroad.def
+Top-level design name: user_proj_example
+Warning: Some pins weren't matched by the config file
+Those are: ['user_clock2', 'analog_io[0]', 'analog_io[1]', 'analog_io[2]', 'analog_io[3]', 'analog_io[4]', 'analog_io[5]', 'analog_io[6]', 'analog_io[7]', 'analog_io[8]', 'analog_io[9]', 'analog_io[10]', 'analog_io[11]', 'analog_io[12]', 'analog_io[13]', 'analog_io[14]', 'analog_io[15]', 'analog_io[16]', 'analog_io[17]', 'analog_io[18]', 'analog_io[19]', 'analog_io[20]', 'analog_io[21]', 'analog_io[22]', 'analog_io[23]', 'analog_io[24]', 'analog_io[25]', 'analog_io[26]', 'analog_io[27]', 'analog_io[28]', 'analog_io[29]', 'analog_io[30]']
+Assigning random sides to the above pins
+Block boundaries: 0 0 900000 600000
+Writing /project/openlane/user_proj_example/runs/user_proj_example/tmp/floorplan/4-ioPlacer.def
