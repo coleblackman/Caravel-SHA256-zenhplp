@@ -262,7 +262,7 @@ module sha3_256_miner_core_248 (
    output reg           irq
 );
 
-parameter STAGES = 8; // Stages (1, 2, 4, or 8)
+parameter STAGES = 1; // Stages (1, 2, 4, or 8)
 
 localparam SHA3_STAGES = 24;
 localparam S = STAGES;
