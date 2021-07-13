@@ -109,13 +109,35 @@ We already saw overhead diagrams of the circuit layout, but how can a designer i
 
 ---
 
-# IO Example: SHA2
+# IO Example: SHA3-256
 
-*Unlike the previous example, this was written by Jean Cyr, not by us.
+*Unlike the previous example, this was written by Jean Cyr, not by us. We changed sections of the code to be compatible with the new die size requirements of the MPW Shuttle 2.0 and rewrote small sections for optimization.
 
 ---
 
+# SHA3 Keccak
 
+- Hashing algorithm (secure hashing algorithm series of functions)
+- Multi-step process based on manipulating the bits of the input data
+- Computing SHA3 hashes is a technique for Proof of Work in some cryptocurrencies
+
+---
+
+# SHA3-256 on Caravel (I/O)
+
+## INSERT CODE SNIPPET HERE
+
+---
+
+# SHA3-256 on Caravel (Optimizations)
+
+## INSERT CODE SNIPPET HERE
+
+---
+
+# SHA3-256 on Caravel (Images)
+
+## INSERT IMAGES OF HARDENING HERE
 
 ---
 
@@ -138,10 +160,20 @@ We already saw overhead diagrams of the circuit layout, but how can a designer i
 
 ---
 
+# Our Future Work: SHA2-256
+
+- Similar to SHA3-256 in nature (SHA)
+- Still widely used today (coexists with SHA3)
+- Used in Bitcoin (ASIC)
+
+---
+
 # **Key Takeaways**
 
 - Skywater PDK - maturing and useful
 - Caravel test harness - good for small applications and education
+- Caravel makes it easy to realize Verilog designs 
+- These tools provide a good testbench for samples of more complex circuits like hashing algorithms
 
 ---
 
