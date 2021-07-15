@@ -125,6 +125,8 @@ We already saw overhead diagrams of the circuit layout, but how can a designer i
 
 # SHA3-256 on Caravel (I/O)
 
+---
+
 ```
 sha3_256_miner_regs #
 (
@@ -144,23 +146,13 @@ s3r
    .sel(wbs_sel_i),    // select
 
    .header_o(header),             // header
-   .difficulty_o(difficulty),     // 
-   .start_nonce_o(start_nonce),
-   .control_o(control),
-   .solution_i(solution_r[1]),
-   .status_i(status_r[1])
+   ...
 );
 ```
 
 ---
 
-# SHA3-256 on Caravel (Optimizations)
-
-## INSERT CODE SNIPPET HERE
-
----
-
-# SHA3-256 on Caravel (Images)
+# SHA3-256 on Caravel
 
 ## INSERT IMAGES OF HARDENING HERE
 
@@ -236,4 +228,3 @@ s3r
 - Jean Cyr https://github.com/miscellaneousbits/
 - Verilog by Example - Blaine Readler
 - Efabless - https://efabless.com/
-
